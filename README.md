@@ -92,7 +92,6 @@ This project supports **multiple databases** (**MySQL** and **PostgreSQL**) usin
 
 - The `application-postgres.properties` and `application-mysql.properties` files contain the database-specific configurations, that needs to be updated accordingly:
   ```properties
-  spring.application.name=springboot
   spring.datasource.url=jdbc:postgresql://localhost:5432/products-api
   spring.datasource.username=postgres
   spring.datasource.password=root
