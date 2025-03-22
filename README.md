@@ -8,12 +8,14 @@ The system allows users to **create, retrieve, update, and delete** clients, ord
 ✅ **CRUD operations** for Clients, Orders, and Products  
 ✅ **One-to-Many relationship** example between Clients and Orders  
 ✅ **Many-to-Many relationship** example between Orders and Products  
-✅ **Exception Handling** with a Global Exception Handler  
-✅ **Data validation** using `@Valid` DTOs  
 ✅ **Database persistence** with PostgreSQL or MySQL with Spring Data JPA  
+✅ **Lombok integration** to reduce boilerplate code for entity classes, DTOs, and services.  
+✅ **Data validation** using `@Valid` DTOs  
+✅ **Exception Handling** with a Global Exception Handler  
 ✅ **Error messages** for data integrity violations  
 ✅ **HATEOAS support** for enhanced API responses  
-✅ **Spring Profiles** allow seamless switching between **PostgreSQL** and **MySQL** by setting the active profile (`spring.profiles.active`) in the configuration or via command-line arguments.
+✅ **Spring Profiles** allow seamless switching between **PostgreSQL** and **MySQL** by setting the active profile (`spring.profiles.active`) in the configuration or via command-line arguments.  
+
 
 ## 🏗️ Technologies Used
 

@@ -1,8 +1,11 @@
 package com.example.springboot.models;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.springframework.hateoas.RepresentationModel;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -10,7 +13,10 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "orders")
+@Data
+@EqualsAndHashCode(callSuper = false)
 public class Order extends RepresentationModel<Order> implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -30,36 +36,4 @@ public class Order extends RepresentationModel<Order> implements Serializable {
         inverseJoinColumns = @JoinColumn(name = "product_id")
     )
     private Set<Product> products;
-
-    public Client getClient() {
-        return client;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
-    }
-
-    public LocalDateTime getOrderedAt() {
-        return orderedAt;
-    }
-
-    public void setOrderedAt(LocalDateTime orderedAt) {
-        this.orderedAt = orderedAt;
-    }
-
-    public UUID getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(UUID orderId) {
-        this.orderId = orderId;
-    }
-
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
 }
